@@ -15,7 +15,7 @@ bw login --apikey
 export BW_SESSION=$(bw unlock --raw $BW_PASSWORD)
 
 if [ "$BW_SESSION" == "" ]; then
-    echo $NOTIFICATION_EMAIL_BODY | mail -s $NOTIFICATION_EMAIL_SUBJECT $BW_NOTIFICATION
+    echo $NOTIFICATION_EMAIL_BODY | mail -s $NOTIFICATION_EMAIL_SUBJECT $BW_NOTIFICATION_EMAIL
     bw logout
     exit 1
 fi;
