@@ -23,7 +23,7 @@ retry() {
     local attempt=1
 
     while [ $attempt -le $max_attempts ]; do
-        echo "Attempt $attempt of $max_attempts: $*"
+        echo "Attempt $attempt of $max_attempts: $1"
         if "$@"; then
             return 0
         fi
@@ -35,7 +35,7 @@ retry() {
         attempt=$((attempt + 1))
     done
 
-    echo "All $max_attempts attempts failed for: $*"
+    echo "All $max_attempts attempts failed for: $1"
     return 1
 }
 
