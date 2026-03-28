@@ -69,7 +69,7 @@ if [ -z "$BW_SESSION" ]; then
 fi
 
 EXPORT_OUTPUT_BASE="bw_export_"
-TIMESTAMP=$(date "+%Y%m%d%H%M%S")
+TIMESTAMP=$(date "+%Y%m%d_%H%M%S")
 ENC_OUTPUT_FILE=$DIRECTORY/$EXPORT_OUTPUT_BASE$TIMESTAMP.enc
 
 # Export and encrypt with retry
